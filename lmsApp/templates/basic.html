@@ -1,0 +1,72 @@
+{% load static %}
+<html>
+<head>
+<title>  </title>
+<style>
+.f{
+
+    height:500px;
+    width:50%;
+    margin-left:30%;
+    color:black;
+    background:transparent;
+
+}
+body{
+    background-image:url('{% static "assets/default/img/bbk1.jpg" %}');
+        background-repeat: no-repeat;
+        background-size:cover;
+        height: 100px;
+        
+        
+}
+
+
+h1{
+    color:black;
+    background:red;
+    text-align:center;
+    height: 40px;
+}
+#s{
+    background:red;
+    color:black;
+    font-size:20px;
+    border-radius:5px;
+    margin-left:100px;
+    box-shadow:5px 5px 5px;
+    }
+input{
+    height:30px;
+    width:200px;
+    border-radius:5px
+
+}
+</style>
+</head>
+<body>
+<div class="f">
+<h1> Login</h1>
+<table>
+<form method="POST">
+    {% csrf_token %}
+<tr>
+     <th> Username : </th>
+     <td>
+        <input type ="text" placeholder ="Enter your name " name="username">
+    </td>
+</tr>
+    <tr>
+    <th> Password : </th>
+    <td>
+        <input type ="password" placeholder="Enter your password " name="password">
+    </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="submit" id ='s'>
+        </td>
+    </tr>
+    </form> 
+</body>
+</html>
